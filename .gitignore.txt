@@ -1,3 +1,4 @@
 .idea/
 posterSFU/.idea/
+posterSFU/.idea
 .idea
