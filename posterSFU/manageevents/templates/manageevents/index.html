@@ -1,0 +1,13 @@
+{% extends 'manageevents/base.html' %}
+
+{% block content %}
+Какая-то информация
+<ul>
+    {% for i in list_university %}
+    <li>
+        <p>{{ i.id }}</p>
+        <p>{{ i.title }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
