@@ -1,0 +1,81 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+    background-color: rgba(235, 235, 235, 1);
+}
+
+/* base.html */
+
+.header {
+    height: 50px;
+    background-color: rgba(216, 240, 244, 1);
+}
+
+.left-container {
+    width: 30%;
+    /* background-color: rgba(246, 246, 246, 1); */
+    height: 800px;
+    float: left;
+    background-color: rgb(234, 161, 161);
+}
+
+.middle-container {
+    width: 40%;
+    background-color: rgb(162, 117, 117);
+    height: 800px;
+    margin-left: 30%;
+    position: absolute;
+    /* background-color: rgba(246, 246, 246, 1); */
+}
+
+.right-container {
+    width: 30%;
+    /* background-color: rgba(246, 246, 246, 1); */
+    height: 800px;
+    float: right;
+    background-color: rgb(92, 70, 70);
+}
+
+.left-container .list-institutes {
+    width: 220px;
+    height: auto;
+    float: right;
+    margin-right: 2%;
+    margin-top: 25px;
+    border-radius: 15px;
+    background-color: rgba(246, 246, 246, 1);
+}
+
+.middle-container .posts {
+    width: 96%;
+    margin: 2%;
+    height: 200px;
+    border-radius: 15px;
+    background-color: rgba(246, 246, 246, 1);
+    margin-top: 25px;
+}
+
+.right-container .chat {
+    width: 220px;
+    height: 400px;
+    float: left;
+    margin-left: 2%;
+    margin-top: 25px;
+    border-radius: 15px;
+    background-color: rgba(246, 246, 246, 1);
+}
+
+.list-institutes .one-institute {
+    width: 92%;
+    margin: 4%;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.one-institute a {
+    text-decoration: none;
+    color: black;
+    background-color:hsl(208, 100%, 97%, 0);
+    width: 100%;
+}

@@ -1,13 +1,40 @@
-{% extends 'manageevents/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'manageevents/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+    </div>
 
-{% block content %}
-Какая-то информация
-<ul>
-    {% for i in list_university %}
-    <li>
-        <p>{{ i.id }}</p>
-        <p>{{ i.title }}</p>
-    </li>
-    {% endfor %}
-</ul>
-{% endblock %}
+    <div class="left-container">
+        <div class="list-institutes">
+            {% for i in list_university %}
+                <div class="one-institute">
+                    <a href="#">{{ i.title }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="middle-container">
+        <div class="posts">
+            <div class="card">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="right-container">
+        <div class="chat">
+
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
