@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class ListUniversity(models.Model):
@@ -31,7 +32,12 @@ class Events(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def __str__(self):
+        return self.description
 
+    def get_absolute_url(self):
+        return reverse('events', kwargs={'event_id': self.pk})
 
     # Специальный класс для отображения в админ-панели
     class Meta:

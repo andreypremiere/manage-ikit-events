@@ -22,9 +22,22 @@
 
     <div class="middle-container">
         <div class="posts">
-            <div class="card">
-                
-            </div>
+            {% for i in posts %}
+                <div class="card">
+                    <a href="#">
+                        <div class="card-one">
+                            {% if i.preview %}
+                            <img class="post-img" src="{{ i.preview.url }}" alt="#">
+                            {% endif %}
+                            <p class="title">{{ i.title|truncatechars:20 }}</p>
+                            <div class="card-information">
+                            <p class="left-part">{{ i.date_of_event|date:"SHORT_DATE_FORMAT"}} {{ i.time_of_event }}</p>
+                            <p class="rigth-part">{{ i.organizer }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 

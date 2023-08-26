@@ -13,7 +13,7 @@
 }
 
 .left-container {
-    width: 30%;
+    width: 20%;
     /* background-color: rgba(246, 246, 246, 1); */
     height: 800px;
     float: left;
@@ -21,16 +21,16 @@
 }
 
 .middle-container {
-    width: 40%;
+    width: 60%;
     background-color: rgb(162, 117, 117);
     height: 800px;
-    margin-left: 30%;
+    margin-left: 20%;
     position: absolute;
     /* background-color: rgba(246, 246, 246, 1); */
 }
 
 .right-container {
-    width: 30%;
+    width: 20%;
     /* background-color: rgba(246, 246, 246, 1); */
     height: 800px;
     float: right;
@@ -50,10 +50,17 @@
 .middle-container .posts {
     width: 96%;
     margin: 2%;
-    height: 200px;
+    height: auto;
     border-radius: 15px;
     background-color: rgba(246, 246, 246, 1);
     margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.posts a {
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
 .right-container .chat {
@@ -78,4 +85,54 @@
     color: black;
     background-color:hsl(208, 100%, 97%, 0);
     width: 100%;
+}
+
+.card {
+    border-radius: 5px;
+    margin: 4%;
+    background-color: rgba(216, 240, 244, 1);
+}
+
+.card .title {
+    display: inline;
+    color: black;
+    background-color:hsl(208, 100%, 97%, 0);
+    font-size: 20px;
+    margin-left: 1%;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card-information .left-part {
+    /* margin-left: 4%; */
+    float: left;
+    display: inline;
+    margin-top: 5px;
+    color: black;
+    background-color:hsl(208, 100%, 97%, 0);    
+    margin-bottom: 5px;
+    margin-left: 1%;
+
+}
+
+.card-information .rigth-part {
+    float: right;
+    display: inline;
+    /* margin-right: 4%; */
+    color: black;
+    margin-top: 5px;
+    background-color:hsl(208, 100%, 97%, 0);
+    margin-bottom: 5px;
+    margin-right: 1%;
+
+}
+
+.card-one {
+    background-color:hsl(208, 100%, 97%, 0);
+
 }

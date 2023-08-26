@@ -3,6 +3,6 @@ from .views import index, news
 
 # здесь прописываем все маршруты текущего приложения
 urlpatterns = [
-    path('', index),
-    path('news/', news)
+    path('', index, name='home'),
+    path('news/', news, name='news')
 ]
