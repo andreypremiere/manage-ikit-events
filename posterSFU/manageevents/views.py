@@ -12,8 +12,22 @@ def index(request):
     # Параметры и переменные, которые передаются на html страницу, передаются третьим аргументом в виде словаря
     return render(request, 'manageevents/index.html', {'title': 'Главная страница',
                                                        'list_university': list_university, 
-                                                       'posts': posts})
+                                                       'posts': posts,
+                                                       'cat_selected': 0})
 
 
 def news(request):
     return render(request, 'manageevents/news.html', {'title': 'Новости'})
+
+def show_events(request, event_id):
+    return HttpResponse(f'id {event_id}')
+
+def show_institutes(request, institute_id):
+    list_university = ListUniversity.objects.all()
+    posts = Events.objects.filter(organizer_id=institute_id)
+    if len(posts) == 0:
+        return HttpResponse('В данном институте нет мероприятий в ближайшее время(((')
+    return render(request, 'manageevents/index.html', {'title': 'Главная страница',
+                                                       'list_university': list_university, 
+                                                       'posts': posts,
+                                                       'cat_selected': institute_id})

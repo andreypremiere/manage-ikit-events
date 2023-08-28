@@ -12,6 +12,9 @@ class ListUniversity(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse('institutes', kwargs={'institute_id': self.pk})
 
 
 class Events(models.Model):
